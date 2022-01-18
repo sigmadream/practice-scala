@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/rock-the-jvm-scala.iml" filepath="$PROJECT_DIR$/rock-the-jvm-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sd-scala-tutorials.iml" filepath="$PROJECT_DIR$/sd-scala-tutorials.iml" />
     </modules>
   </component>
 </project>
