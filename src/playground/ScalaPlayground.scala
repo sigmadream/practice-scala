@@ -1,5 +1,11 @@
 package playground
 
+import scala.annotation.tailrec
+
 object ScalaPlayground extends App {
-  for (i <- 1 to 100) { var s = ""; if (i%3==0) s="type"; if (i%5==0) s+="safe"; if(s.isEmpty) s += i; println(s) }
+  def stringify[A, B, C](t: (A, B, C)): (A, String, B, String, C, String) = {
+    (t._1, t._1.toString, t._2, t._2.toString, t._3, t._3.toString)
+  }
+
+  println(stringify(1, 1.1, 1L))
 }
