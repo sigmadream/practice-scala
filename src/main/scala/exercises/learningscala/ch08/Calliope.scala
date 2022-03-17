@@ -2,7 +2,7 @@ package exercises.learningscala.ch08
 
 import javax.sound.midi.MidiChannel
 
-private class Calliope(volume: Int) {
+class Calliope(volume: Int) {
   private val duration = 250L
   private lazy val synth = javax.sound.midi.MidiSystem.getSynthesizer
 
