@@ -1,4 +1,4 @@
-package exercises.learningscala.ch08
+package learning.scala.ch08
 
 import java.text.SimpleDateFormat
 import java.util.Date

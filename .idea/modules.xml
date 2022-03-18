@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/sd-scala-tutorials.iml" filepath="$PROJECT_DIR$/sd-scala-tutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala Seed Project.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala Seed Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Scala Seed Project-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Scala Seed Project-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.Scala Seed Project-build.iml" filepath="$PROJECT_DIR$/.idea/modules/project.Scala Seed Project-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-tutorial.Scala Seed Project.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-tutorial.Scala Seed Project.iml" />
     </modules>
   </component>
 </project>
