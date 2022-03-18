@@ -1,9 +1,10 @@
 package exercises.learningscala.ch09
 
 object HtmlUtils {
-  def removeMarkup(input: String): String = {
+  def removeMarkup(input: String) = {
     input
-      .replaceAll("""</?\w[^>]*>""", "")
-      .replaceAll("<.*>", "")
+      .replaceAll("(?s)<script.*</script>", "")
+      .replaceAll("""</?\w[^>]*>""","")
+      .replaceAll("<.*>","")
   }
 }
