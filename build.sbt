@@ -1,17 +1,15 @@
-import Dependencies._
-
-ThisBuild / scalaVersion     := "3.1.1"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "com.sangkon"
+ThisBuild / scalaVersion := "3.1.2"
+ThisBuild / version := "1.0.0"
+ThisBuild / organization := "com.sangkon"
 ThisBuild / organizationName := "sangkon"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "Scala Seed Project",
-    libraryDependencies += scalaTest % Test,
-    libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11" % Test,
-    libraryDependencies += "org.json4s" %% "json4s-native" % "4.0.4",
-    libraryDependencies += "org.json4s" %% "json4s-jackson" % "4.0.4",
+    name := "Practice Scala",
+    libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test",
+    libraryDependencies += "org.json4s" %% "json4s-native" % "4.0.5",
+    libraryDependencies += "org.json4s" %% "json4s-jackson" % "4.0.5"
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
