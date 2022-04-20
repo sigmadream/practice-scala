@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Practice Scala.iml" filepath="$PROJECT_DIR$/.idea/modules/Practice Scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Practice Scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Practice Scala-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice-scala.Practice Scala.iml" filepath="$PROJECT_DIR$/.idea/modules/practice-scala.Practice Scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.Practice Scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/project.Practice Scala-build.iml" />
     </modules>
   </component>
 </project>
