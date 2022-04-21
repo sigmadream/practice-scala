@@ -1,6 +1,6 @@
 package learning.scala.ch09
 
-import com.sangkon.learningscala.ch09.{GithubIssue, HttpSupport}
+import com.sangkon.learningscala.ch09.{GHIssueReporter, GithubIssue, HttpSupport}
 import org.scalatest.*
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
@@ -21,25 +21,25 @@ class GHIssueReporterSpec extends AnyFlatSpec with should.Matchers with PrintlnT
     val sp = " *"
 
     withPrintlnCapture {
-      main(Array(""))
+      GHIssueReporter.main(Array(""))
     } should include("Usage: GHIssueReporter user/repo")
     withPrintlnCapture {
-      main(Array("hohoho"))
+      GHIssueReporter.main(Array("hohoho"))
     } should include("Usage: GHIssueReporter user/repo")
     withPrintlnCapture {
-      main(Array("hi", "there"))
+      GHIssueReporter.main(Array("hi", "there"))
     } should include("Usage: GHIssueReporter user/repo")
     withPrintlnCapture {
-      main(Array("hi", "there", "everyone"))
+      GHIssueReporter.main(Array("hi", "there", "everyone"))
     } should include("Usage: GHIssueReporter user/repo")
     withPrintlnCapture {
-      main(Array("hi/there", "everyone"))
+      GHIssueReporter.main(Array("hi/there", "everyone"))
     } should include("Usage: GHIssueReporter user/repo")
   }
 
   it should "parse the number of issues to report" in {
     val output = withPrintlnCapture {
-      main(Array("slick/slick", "1"))
+      GHIssueReporter.main(Array("slick/slick", "1"))
     }
     output should not include "Usage: GHIssueReporter user/repo"
     output should include("Comments")
@@ -48,7 +48,7 @@ class GHIssueReporterSpec extends AnyFlatSpec with should.Matchers with PrintlnT
 
   it should "build a report from a list of issues" in {
     val issues = GithubIssue.parseIssuesFromJson(sampleJsonIssue)
-    val report = buildReport(issues)
+    val report = GHIssueReporter.buildReport(issues)
     report should include("|4239   |")
     report should include("|Trivial refactoring of scala / actors                                 |")
     report should include("|jxcoder        |")
@@ -58,7 +58,7 @@ class GHIssueReporterSpec extends AnyFlatSpec with should.Matchers with PrintlnT
 
   it should "format a single issue into a line of text" in {
     val issues = GithubIssue.parseIssuesFromJson(sampleJsonIssue)
-    val report = formatIssue(issues.head)
+    val report = GHIssueReporter.formatIssue(issues.head)
     report should include("|4239   |")
     report should include("|Trivial refactoring of scala / actors                                 |")
     report should include("|jxcoder        |")
