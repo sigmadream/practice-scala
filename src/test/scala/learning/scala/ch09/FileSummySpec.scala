@@ -1,5 +1,6 @@
 package learning.scala.ch09
 
+import com.sangkon.learningscala.ch09.SafeStringUtils
 import org.scalatest.*
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
@@ -7,8 +8,6 @@ import org.scalatest.matchers.should
 import java.io.{File, PrintWriter}
 
 class FileSummarySpec extends AnyFlatSpec with should.Matchers {
-
-  import FileSummary._
 
   "The FileSummy app" should "correctly summarize a short file" in {
     val file = newFile("this is is not a test")

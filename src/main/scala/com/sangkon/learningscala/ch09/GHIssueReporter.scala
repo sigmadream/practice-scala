@@ -1,4 +1,4 @@
-package learning.scala.ch09
+package com.sangkon.learningscala.ch09
 
 import org.json4s.*
 import org.json4s.jackson.JsonMethods.*

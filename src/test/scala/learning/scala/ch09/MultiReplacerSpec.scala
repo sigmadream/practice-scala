@@ -1,14 +1,13 @@
 package learning.scala.ch09
 
-import org.scalatest._
+import com.sangkon.learningscala.ch09.SafeStringUtils
+import org.scalatest.*
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 
 import java.io.File
 
 class MultiReplacerSpec extends AnyFlatSpec with should.Matchers {
-
-  import MultiReplacer._
 
   val content = "Twas brillig, and the slithy toves"
 

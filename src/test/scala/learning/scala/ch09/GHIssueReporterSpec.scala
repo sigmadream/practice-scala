@@ -1,5 +1,6 @@
 package learning.scala.ch09
 
+import com.sangkon.learningscala.ch09.{GithubIssue, HttpSupport}
 import org.scalatest.*
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
@@ -15,8 +16,6 @@ trait PrintlnTesting {
 }
 
 class GHIssueReporterSpec extends AnyFlatSpec with should.Matchers with PrintlnTesting {
-
-  import GHIssueReporter._
 
   "The GHIssueReporter app" should "catch invalid input" in {
     val sp = " *"

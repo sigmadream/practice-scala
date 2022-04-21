@@ -1,4 +1,4 @@
-package learning.scala.ch09
+package com.sangkon.learningscala.ch09
 
 import scala.util.{Random, Try}
 

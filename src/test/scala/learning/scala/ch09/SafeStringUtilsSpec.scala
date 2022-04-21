@@ -1,6 +1,7 @@
 package learning.scala.ch09
 
-import org.scalatest._
+import com.sangkon.learningscala.ch09.SafeStringUtils
+import org.scalatest.*
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 
