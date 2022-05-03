@@ -1,4 +1,4 @@
-package learning.scala.ch08
+package com.sangkon.learningscala.ch08
 
 import scala.annotation.tailrec
 
