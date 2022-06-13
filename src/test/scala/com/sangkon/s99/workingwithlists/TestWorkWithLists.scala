@@ -35,4 +35,20 @@ class TestWorkWithLists extends AnyFlatSpec with should.Matchers {
   "A nth Recursive" should "Find the Kth element of a list." in {
     workWithLists.nthRecursive(2, List(1, 1, 2, 3, 5, 8)) should be(2)
   }
+
+  "Length" should "Find the number of elements of a list." in {
+    workWithLists.lengthBuiltin(List(1, 1, 2, 3, 5, 8)) should be(6)
+  }
+
+  "Length Recursive" should "Find the number of elements of a list." in {
+    workWithLists.lengthRecursive(List(1, 1, 2, 3, 5, 8)) should be(6)
+  }
+
+  "Length Tail Recursive" should "Find the number of elements of a list." in {
+    workWithLists.lengthTailRecursive(List(1, 1, 2, 3, 5, 8)) should be(6)
+  }
+
+  "Length More FP" should "Find the number of elements of a list." in {
+    workWithLists.lengthFunctional(List(1, 1, 2, 3, 5, 8)) should be(6)
+  }
 }
