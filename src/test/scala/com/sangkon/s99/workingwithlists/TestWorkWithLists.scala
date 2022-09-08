@@ -51,4 +51,20 @@ class TestWorkWithLists extends AnyFlatSpec with should.Matchers {
   "Length More FP" should "Find the number of elements of a list." in {
     workWithLists.lengthFunctional(List(1, 1, 2, 3, 5, 8)) should be(6)
   }
+
+  "Reverse" should "Find the number of elements of a list." in {
+    workWithLists.reverseBuiltin(List(1, 1, 2, 3, 5, 8)) should be(List(8, 5, 3, 2, 1, 1))
+  }
+
+  "Reverse Recursive" should "Find the number of elements of a list." in {
+    workWithLists.reverseRecursive(List(1, 1, 2, 3, 5, 8)) should be(List(8, 5, 3, 2, 1, 1))
+  }
+
+  "Reverse Tail Recursive" should "Find the number of elements of a list." in {
+    workWithLists.reverseTailRecursive(List(1, 1, 2, 3, 5, 8)) should be(List(8, 5, 3, 2, 1, 1))
+  }
+
+  "Reverse More FP" should "Find the number of elements of a list." in {
+    workWithLists.reverseFunctional(List(1, 1, 2, 3, 5, 8)) should be(List(8, 5, 3, 2, 1, 1))
+  }
 }

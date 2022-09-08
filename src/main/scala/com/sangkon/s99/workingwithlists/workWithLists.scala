@@ -2,7 +2,7 @@ package com.sangkon.s99.workingwithlists
 
 object workWithLists extends App {
 
-  // p01. Find the last element of a list.
+  // P01 (*) Find the last element of a list.
   def last[T](ls: List[T]): T = ls.last
 
   def lastRecursive[T](ls: List[T]): T = ls match {
@@ -11,7 +11,7 @@ object workWithLists extends App {
     case _ => throw new NoSuchElementException
   }
 
-  // p02. Find the last but one element of a list.
+  // P02 (*) Find the last but one element of a list.
   def penultimate[T](ls: List[T]): T =
     if (ls.isEmpty) throw new NoSuchElementException
     else ls.init.last
@@ -22,19 +22,18 @@ object workWithLists extends App {
     case _ => throw new NoSuchElementException
   }
 
-  // p03. Find the Kth element of a list.
+  // P03 (*) Find the Kth element of a list.
   def nthBuiltin[A](n: Int, ls: List[A]): A =
     if (n >= 0) ls(n)
     else throw new NoSuchElementException
 
-  // Not that much harder without.
   def nthRecursive[A](n: Int, ls: List[A]): A = (n, ls) match {
     case (0, h :: _) => h
     case (n, _ :: tail) => nthRecursive(n - 1, tail)
     case (_, Nil) => throw new NoSuchElementException
   }
 
-  // p04. Find the number of elements of a list.
+  // P04 (*) Find the number of elements of a list.
   def lengthBuiltin[A](ls: List[A]): Int = ls.length
 
   def lengthRecursive[A](ls: List[A]): Int = ls match {
@@ -52,5 +51,24 @@ object workWithLists extends App {
   }
 
   def lengthFunctional[A](ls: List[A]): Int = ls.foldLeft(0) { (c, _) => c + 1 }
+
+  // P05 (*) Reverse a list.
+  def reverseBuiltin[A](ls: List[A]): List[A] = ls.reverse
+
+  def reverseRecursive[A](ls: List[A]): List[A] = ls match {
+    case Nil => Nil
+    case h :: tail => reverseRecursive(tail) ::: List(h)
+  }
+
+  def reverseTailRecursive[A](ls: List[A]): List[A] = {
+    def reverseR(result: List[A], curList: List[A]): List[A] = curList match {
+      case Nil => result
+      case h :: tail => reverseR(h :: result, tail)
+    }
+
+    reverseR(Nil, ls)
+  }
+
+  def reverseFunctional[A](ls: List[A]): List[A] = ls.foldLeft(List[A]()) { (r, h) => h :: r }
 }
 
