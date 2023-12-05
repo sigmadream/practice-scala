@@ -56,8 +56,29 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Created by https://www.toptal.com/developers/gitignore/api/scala,metals,bloop
+# Edit at https://www.toptal.com/developers/gitignore?templates=scala,metals,bloop
+
+### Bloop ###
+.bloop/
+
+### Metals ###
+.metals/
+project/**/metals.sbt
+
+### Scala ###
+*.class
+*.log
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.toptal.com/developers/gitignore/api/scala,metals,bloop
+
 # Custom
 .bsp/
 .idea/
+.vscode/
+project/
 
 # End of https://www.toptal.com/developers/gitignore/api/sbt,scala,intellij+all
